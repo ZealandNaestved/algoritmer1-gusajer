@@ -1,3 +1,4 @@
+
 import java.util.Random;
 
 /**
@@ -11,7 +12,7 @@ public class Algorithms1 {
 
     // TODO 1 - Gennemse Data klassen, og skriv gode kommentarer til det
 
-    // TODO 2 - Skriv en randomBoyName() metode i Algorithms1, som returnerer et tilfældigt drengenavn fra Data klassens randomPigeNavne property OBS: randomPigeNavne skal forblive private!
+    // TODO 2 - Skriv en randomBoyName() metode i Algorithms1, som returnerer et tilfældigt drengenavn fra Data klassens randomBoyNavne property OBS: randomBoyNavne skal forblive private!
 
     // TODO 3 - Skriv en test til randomBoyName() metoden HINT: Se metoden exampleOfPredictableRandomNumber() for at se, hvordan du kan lave et tilfældigt nummer som er altid det samme (til test)
 
@@ -26,7 +27,7 @@ public class Algorithms1 {
     // TODO 8 - Skriv en  plet eller krone generator metode (plet er boolean true og krone er boolean false)
 
     public static void main(String[] args) {
-        exampleOfPredictableRandomNumber();
+        randomBoyName();
     }
 
     private static void exampleOfPredictableRandomNumber() {
@@ -36,4 +37,14 @@ public class Algorithms1 {
         System.out.println(random.nextInt(45));
     }
 
+    public static void randomBoyName() {
+
+        Random rand = new Random();
+        int rng = rand.nextInt(44);
+
+        String[] names = new Data().getRandomDrengeNavne();
+
+        System.out.println("Boy Name: " + names[rng]);
+
+    }
 }
